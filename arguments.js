@@ -1,0 +1,1 @@
+module.exports=["1000000000", "US Dollar Token", "USDT", 2];

@@ -1,0 +1,5 @@
+npx hardhat run --network rinkeby scripts/deploy_usdt.js
+npx hardhat run --network rinkeby scripts/deploy_escrow.js
+npx hardhat test --network rinkebyTest
+
+npx hardhat verify --network rinkeby 0x104885e03B4d1003Cda40a79541362553378eA5F --constructor-args arguments.js 
