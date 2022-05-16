@@ -4,7 +4,6 @@ const { PK_JFD, PKJJ, PK_FREELANCER, PK_BUYER, PK_ZZZ, PK_VINOD, URL_RINKEBY, UR
 require("@nomiclabs/hardhat-waffle");
 require("@openzeppelin/hardhat-upgrades");
 require("@nomiclabs/hardhat-etherscan");
-require('@openzeppelin/hardhat-upgrades');
 require('solidity-coverage');
 
 // This is a sample Hardhat task. To learn how to create your own go to
