@@ -1,5 +1,10 @@
 npx hardhat run --network rinkeby scripts/deploy_usdt.js
+npx hardhat run --network rinkeby scripts/deploy_spay.js
 npx hardhat run --network rinkeby scripts/deploy_escrow.js
-npx hardhat test --network rinkebyTest
 
-npx hardhat verify --network rinkeby 0x104885e03B4d1003Cda40a79541362553378eA5F --constructor-args arguments.js 
+npx hardhat run --network mumbai scripts/deploy_usdt.js
+npx hardhat run --network mumbai scripts/deploy_spay.js
+npx hardhat run --network mumbai scripts/deploy_escrow.js
+
+
+npx hardhat verify --network mumbai 0x195B38A9E8CFBc0f1bC9A25Df4aE624AB95BE785 --constructor-args arguments.js 

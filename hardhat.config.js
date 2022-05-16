@@ -1,6 +1,6 @@
 const dotenv = require("dotenv");
 dotenv.config({path: __dirname + '/.env'});
-const { PK_JFD, PKJJ, PK_ZZZ, PK_VINOD, URL_RINKEBY, URL_MUMBAI, API_KEY_RINKEBY, API_KEY_MUMBAI } = process.env;
+const { PK_JFD, PKJJ, PK_FREELANCER, PK_BUYER, PK_ZZZ, PK_VINOD, URL_RINKEBY, URL_MUMBAI, API_KEY_RINKEBY, API_KEY_MUMBAI } = process.env;
 require("@nomiclabs/hardhat-waffle");
 require("@openzeppelin/hardhat-upgrades");
 require("@nomiclabs/hardhat-etherscan");
@@ -58,20 +58,20 @@ networks: {
   rinkeby:{
     // gasPrice : secret.gasPrice * 1000000000,
     url: URL_RINKEBY,
-    accounts: [PK_JFD]
+    accounts: [PKJJ]
   },
   mumbai:{
     // gasPrice : secret.gasPrice * 1000000000,
     url: URL_MUMBAI,
-    accounts: [PK_JFD],
+    accounts: [PKJJ, PK_BUYER, PK_FREELANCER],
   },
   rinkebyTest:{
     url: URL_RINKEBY,
-    accounts: [PK_JFD, PKJJ, PK_ZZZ],
+    accounts: [PKJJ],
   },
   mumbaiTest:{
     url: URL_MUMBAI,
-    accounts: [PK_JFD,PK_VINOD,PK_ZZZ,PK_ZZZ,PKJJ],
+    accounts: [PKJJ],
   }
 },
 etherscan: {
